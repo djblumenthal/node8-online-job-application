@@ -4,4 +4,6 @@ block content
 	.container
 		h1 Applicants
 		ul#applications.list-unstyled
-			li Applicants should go here.
+			each val in applicants
+				li= val.name
+					button.delete(id='#{val._id}') Delete Applicant
